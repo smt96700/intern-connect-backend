@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const decodejwt = (req, res, next) => {
     try {
-
+        console.log("inside decode jwt", req.headers)
         let token = req.headers.cookie ? req.headers.cookie.split(';').find(c => c.trim().startsWith('token=')) : null;
         console.log("token in decode jwt: ",token)
         if (!token) {

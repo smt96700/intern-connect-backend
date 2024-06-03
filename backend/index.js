@@ -73,7 +73,7 @@ const server = app.listen(process.env.PORT, () => {
 //create socket instance
 const io = new Server(server, {
     cors: {
-        origin: "https://intern-connect-backend-quvx.onrender.com",
+        origin: "https://intern-connect-frontend.vercel.app",
         methods: ["GET", "POST", "PUT"],
         credentials: true,
     },
