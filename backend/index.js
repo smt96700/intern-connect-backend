@@ -25,7 +25,7 @@ app.use(cookieParser());
 //cors policy
 app.use(cors(
     {
-        origin: "https://intern-connect-frontend.vercel.app/",
+        origin: "https://intern-connect-frontend.vercel.app",
         methods: "GET, POST, OPTIONS, PUT, DELETE",
         credentials: true,
     }
