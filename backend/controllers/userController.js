@@ -144,6 +144,8 @@ const logout = async (req, res) => {
     try {
         res.cookie("token", "", {
             httpOnly: true,
+            secure: true,
+            sameSite: 'none',
             expiresIn: new Date(0)
         });
         return res.status(200).json({ status: 200, message: "Successfully logout" });
