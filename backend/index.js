@@ -73,7 +73,7 @@ const server = app.listen(process.env.PORT, () => {
 //create socket instance
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: "https://intern-connect-backend-quvx.onrender.com",
         methods: ["GET", "POST", "PUT"],
         credentials: true,
     },
