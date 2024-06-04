@@ -114,10 +114,11 @@ io.on("connection", (socket) => {
     //     const adminSocketId= userSocketMap.get("admin01");
     //     socket.to(adminSocketId).emit("message", message);
     // }
-    socket.on("message_sent", (message)=>{
+    socket.on("message_sent", async(message)=>{
         if(userType=="student" && message){
             console.log("inside socket on :", message);
-          socket.to(userSocketMap.get("admin01")).emit("message_received", message);
+            await socket.to(userSocketMap.get("admin01")).emit("message_received", message);
+            
         }
     })
     // socket.on("dm", (message)=> {dm(io, userSocketMap, socket, message)})

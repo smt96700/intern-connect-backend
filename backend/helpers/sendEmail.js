@@ -46,8 +46,8 @@ const sendEmail= async ({email, userId, username, userType}) => {
             from: myEmail, 
             to: email,
             subject: 'Reset your password',
-            html: `<p>Click <a href="${process.env.DOMAIN}/reset-password?token=${hashedToken}&userType=${userType}">here</a> to reset your password or copy and paste the below link in your browser,
-                <br>${process.env.DOMAIN}/reset-password?token=${hashedToken}&userType=${userType}</p> `
+            html: `<p>Click <a href="https://intern-connect-frontend.vercel.app/reset-password?token=${hashedToken}&userType=${userType}">here</a> to reset your password or copy and paste the below link in your browser,
+                <br>https://intern-connect-frontend.vercel.app/reset-password?token=${hashedToken}&userType=${userType}</p> `
         };
 
         // Send email
