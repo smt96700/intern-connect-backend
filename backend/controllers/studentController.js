@@ -19,7 +19,7 @@ cloudinary.config({
 
 const dashboard = async (req, res) => {
   try {
-    console.log("REquest accepted")
+    console.log("REquest accepted", req.query.userid)
     const userid = req.query.userid
 
     const findStudentQuery = `

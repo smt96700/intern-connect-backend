@@ -117,6 +117,9 @@ io.on("connection", (socket) => {
     socket.on("message_sent", async(message)=>{
         if(userType=="student" && message){
             console.log("inside socket on :", message);
+            console.log("map map map");
+            console.log("inside map:", userSocketMap);
+            console.log("messages are sent to the admin");
             await socket.to(userSocketMap.get("admin01")).emit("message_received", message);
             
         }
